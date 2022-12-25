@@ -1,6 +1,6 @@
 ## Intro
 
-A template for boostrapping a backend service(GraphQL & Restful) using *Apollo Server + Nexus + Prisma (ANP) stack*, with various other useful tools like devops, testing, etc.
+A template for boostrapping a backend service(GraphQL & Restful) using *Apollo Server + Nexus + Prisma* stack, with various other useful tools like devops, testing, etc.
 
 ## Stack
 
