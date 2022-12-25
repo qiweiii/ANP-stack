@@ -59,3 +59,4 @@ A template for boostrapping a backend service(GraphQL & Restful) using *Apollo S
 ## Helpful debug issues
 
 - [ambiguous NEXUS__UNKNOWN__TYPE error](https://github.com/graphql-nexus/nexus/issues/1119)
+- [(DB Migration) Moving backwards and reverting all changes](https://www.prisma.io/docs/guides/database/production-troubleshooting#moving-backwards-and-reverting-all-changes)
