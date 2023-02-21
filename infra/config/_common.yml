@@ -1,0 +1,20 @@
+# Example image pull secrets:
+# imagePullSecrets:
+# - name: regcred
+
+# app:
+#   name: example-app
+#   version: v1
+# image:
+#   repository: myrepo
+#   tag: v1
+# ingress:
+#   enabled: true
+#   hosts:
+#     - host: example.com # Host the app at example.com
+#       paths: ['/']
+secrets:
+  #   - name: DATABASE_URL
+  #     value: postgres://123@test.com
+  - name: API_KEY
+    value: '${{ secrets.API_KEY }}'
