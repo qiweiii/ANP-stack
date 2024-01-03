@@ -1,5 +1,5 @@
 import { gql, GraphQLClient } from 'graphql-request';
-import { PrismaClient } from '@prisma/client';
+import { Post, PrismaClient, User } from '@prisma/client';
 
 const db: PrismaClient = new PrismaClient();
 const client: GraphQLClient = new GraphQLClient(`http://localhost:${process.env.PORT}/graphql`);
@@ -33,7 +33,7 @@ const signupUser = gql`
 
 describe('User', () => {
   it('Get drafts by user email', async () => {
-    const { draftsByUser: drafts } = await client.request(draftsByUser, {
+    const { draftsByUser: drafts } = await client.request<{ draftsByUser: Post[] }>(draftsByUser, {
       userUniqueInput: { email: 'test2@example.com' },
     });
     expect(drafts.length).toEqual(1);
@@ -50,7 +50,7 @@ describe('User', () => {
   it('Create a new user', async () => {
     // clear this test user before creating
     await db.$executeRaw`delete from public."User" where "email" = 'yangqiwei97@gmail.com'`;
-    const { signupUser: newUser } = await client.request(signupUser, {
+    const { signupUser: newUser } = await client.request<{ signupUser: User }>(signupUser, {
       data: {
         name: 'QiweiTest',
         email: 'yangqiwei97@gmail.com',

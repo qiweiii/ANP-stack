@@ -7,7 +7,7 @@ import logger from 'src/logger';
 export interface GQLContext {
   prisma: PrismaClient;
   logger: Console;
-  // TODO: may add token stuff if need in future
+  // TODO: add token stuff
   // token: string;
 }
 

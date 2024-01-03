@@ -1,6 +1,5 @@
 generator client {
-  provider        = "prisma-client-js"
-  previewFeatures = ["filteredRelationCount"] // TODO: What is this? Do I need this?
+  provider = "prisma-client-js"
 }
 
 datasource db {
